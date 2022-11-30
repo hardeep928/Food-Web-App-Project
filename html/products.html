@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products</title>
+	  <link
+      rel="icon"
+      href="\Images\Fooding-Logo.png"
+      type="image/icon type"
+    />
+    <link rel="stylesheet" href="../css/products.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header sticky">
+        <div>
+		 
+          <a href="home.html"
+            ><img
+              src="\Images\Fooding-Logo.png"
+              alt="logo"
+          /></a>
+        </div>
+        <div class="categories">
+          <ul>
+            <li class="dropdown-content1 dropdown-content">
+              <a href="home.html">Home</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Search Div -->
+        <div class="search-div">
+          <img
+            id="searchpng"
+            src="\Images\search.svg"
+            alt="Search Bar"
+          />
+
+          <input
+            type="text"
+            placeholder="Search for products, brands and more"
+          />
+        </div>
+
+       <div class="nav-last">
+          <div>
+            <a href="login.html">
+              <img
+                id="svg"
+                src="https://www.svgrepo.com/show/198180/user-profile.svg"
+                alt=""
+              />
+            </a>
+
+            <div> Profile  </div>
+			
+          </div>
+
+          <div>
+            <a href="bag.html">
+              <img
+                id="svg"
+                src="https://www.svgrepo.com/show/14970/heart.svg"
+                alt=""
+              />
+            </a>
+
+            <div>Loved</div>
+          </div>
+
+          <div>
+            <a href="bag.html">
+              <img
+                id="svg"
+                src="https://www.svgrepo.com/show/17522/bag.svg"
+                alt=""
+              />
+            </a>
+
+            <div> cart</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- dropdown -->
+      <div class="dropdown-menu1 dropdown-menu">
+        <p>Food </p>
+      </div>
+
+      
+      <!-- content -->
+      <div class="content">
+        <div class="midsize">Home / <span>Fooding Bradings</span></div>
+        <div class="midsizeplus padding">
+        </div>
+
+        <div class="products-catalogue">
+          <div class="filter-left">
+            <div class="midsizeplus" style="padding: 20px 20px">FILTERS</div>
+            <div class="filters">
+              <div class="filter-categories">
+                <p>Food Brands</p>
+
+                <input
+                  type="checkbox"
+                  id="haldiram"
+                  value="haldiram"
+                  onclick="filter('Haldiram')"
+                />
+                <label for="haldiram">Haldiram</label><br />
+                <input
+                  type="checkbox"
+                  id="bikanerwala"
+                  value="bikanerwala"
+                  onclick="filter('Bikanerwala')"
+                />
+                <label for="bikanerwala">Bikanerwala</label><br />
+
+                <input
+                  type="checkbox"
+                  id="KFC"
+                  value="KFC"
+                  onclick="filter('KFC')"
+                />
+                <label for="KFC">KFC</label><br />
+
+                <input
+                  type="checkbox"
+                  id="subway"
+                  value="subway"
+                  onclick="filter('Subway')"
+                />
+                <label for="Subway">Subway</label><br />
+
+                <input
+                  type="checkbox"
+                  id="burger king"
+                  value="burger king"
+                  onclick="filter('Burger King')"
+                />
+                <label for="burger king">Burger King</label><br />
+                
+              </div>
+              <div class="filter-categories">
+                <p>Price</p>
+                <input
+                  type="checkbox"
+                  id="30"
+                  value="30"
+                  onclick="priceFilter(30, 0)"
+                />
+                <label for="30">Below 30</label><br />
+
+                <input
+                  type="checkbox"
+                  id="100"
+                  value="100"
+                  onclick="priceFilter(100, 30)"
+                />
+                <label for="100">Rs.30 to Rs.100</label><br />
+                <input
+                  type="checkbox"
+                  id="300"
+                  value="300"
+                  onclick="priceFilter(300, 100)"
+                />
+                <label for="300">Rs.100 to Rs.300</label><br />
+                <input
+                  type="checkbox"
+                  id="500"
+                  value="500"
+                  onclick="priceFilter(500, 300)"
+                />
+                <label for="500">Rs.300 to Rs. 500</label><br />
+              </div>
+
+              <!-- <div class="filter-categories">			  
+                 <p>Color</p>
+                <input type="checkbox" id="red" value="red" />
+                <label for="red">
+                  <span class="color"></span>
+                  Red</label
+                ><br />
+
+                <input type="checkbox" id="blue" value="blue" />
+                <label for="blue"
+                  ><span class="color" style="background-color: blue"></span>
+                  Blue</label
+                ><br />
+
+                <input type="checkbox" id="green" value="green" />
+                <label for="green"
+                  ><span class="color" style="background-color: green"></span>
+                  Green</label
+                ><br />
+
+                <input type="checkbox" id="yellow" value="yellow" />
+                <label for="yellow"
+                  ><span class="color" style="background-color: yellow"></span>
+                  Yellow</label
+                ><br />
+
+                <input type="checkbox" id="black" value="black" />
+                <label for="black"
+                  ><span class="color" style="background-color: black"></span>
+                  Black</label
+                ><br />
+
+                <input type="checkbox" id="white" value="white" />
+                <label for="white"
+                  ><span class="color" style="background-color: white"></span>
+                  White</label
+                ><br />
+              </div> -->
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="sort">
+              <select name="type" id="type">
+                <option selected>Sort By</option>
+                <option value="1">Price : High to Low</option>
+                <option value="2">Price : Low to High</option>
+                <option value="3">Best Discount</option>
+                <option value="4">Popularity</option>
+              </select>
+            </div>
+            <div id="products-right"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+  </body>
+</html>
+<script src="../js/products.js"></script>
+<script src="../js/allfiles.js"></script>
